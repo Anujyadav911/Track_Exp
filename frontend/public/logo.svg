@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with better proportions -->
+  <circle cx="256" cy="256" r="240" fill="#4CAF50" stroke="#2E7D32" stroke-width="6"/>
+  
+  <!-- Wallet body - adjusted for better mobile visibility -->
+  <rect x="140" y="200" width="232" height="112" rx="16" fill="#FFC107" stroke="#FF8F00" stroke-width="3"/>
+  
+  <!-- Wallet fold - adjusted positioning -->
+  <rect x="140" y="200" width="232" height="32" rx="16" fill="#FF9800"/>
+  
+  <!-- Dollar sign - perfectly centered in wallet -->
+  <text x="256" y="265" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#2E7D32">$</text>
+  
+  <!-- Small decorative elements - repositioned -->
+  <circle cx="160" y="216" r="4" fill="#FF5722"/>
+  <circle cx="352" y="216" r="4" fill="#FF5722"/>
+  
+  <!-- App name text - removed for cleaner mobile look -->
+  <!-- The text will be handled by CSS for better responsiveness -->
+</svg>

@@ -8,12 +8,15 @@ services:
     buildCommand: npm install
     startCommand: npm start
     envVarGroups:
-      - track-exp-secrets # create this group in Render with MONGO_CONN and JWT_SECRET
+      - track-exp-secrets # define this group in Render with MONGO_CONN and JWT_SECRET
     envVars:
       - key: CORS_ORIGIN
-        value: https://track-exp.onrender.com # frontend URL (adjust if you change the name below)
+        fromService:
+          type: static
+          name: track-exp
+          property: url
 
-  - type: static_site
+  - type: static
     name: track-exp
     rootDir: Mern-Auth/frontend
     plan: free
@@ -21,4 +24,7 @@ services:
     publishPath: build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://track-exp-api.onrender.com # backend URL; adjust if you change the API service name
+        fromService:
+          type: web
+          name: track-exp-api
+          property: url

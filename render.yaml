@@ -12,11 +12,11 @@ services:
     envVars:
       - key: CORS_ORIGIN
         fromService:
-          type: static
+          type: static_site
           name: track-exp
           property: url
 
-  - type: static
+  - type: static_site
     name: track-exp
     rootDir: Mern-Auth/frontend
     plan: free

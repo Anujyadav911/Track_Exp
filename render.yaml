@@ -8,15 +8,15 @@ services:
     buildCommand: npm install
     startCommand: npm start
     envVarGroups:
-      - track-exp-secrets # define this group in Render with MONGO_CONN and JWT_SECRET
+      - track-exp-secrets
     envVars:
       - key: CORS_ORIGIN
         fromService:
-          type: static_site
+          type: static
           name: track-exp
           property: url
 
-  - type: static_site
+  - type: static
     name: track-exp
     rootDir: Mern-Auth/frontend
     plan: free
